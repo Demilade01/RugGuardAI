@@ -6,6 +6,7 @@ import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { FeaturesSection } from "@/components/sections/features";
 import { ProductPreviewSection } from "@/components/sections/product-preview";
 import { SecuritySection } from "@/components/sections/security";
+import { FooterSection } from "@/components/sections/footer";
 
 export default function Home() {
   return (
@@ -20,10 +21,7 @@ export default function Home() {
       <ProductPreviewSection />
       <SecuritySection />
 
-      {/* Footer */}
-      <footer className="w-full py-8 border-t border-border/40 text-center text-muted-foreground text-sm z-10 bg-background/80 backdrop-blur-md">
-        <p>© 2026 RugGuard AI. All rights reserved. Not financial advice.</p>
-      </footer>
+      <FooterSection />
     </main>
   );
 }

@@ -18,9 +18,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RugGuard AI | Web3 Security Agent",
-  description: "AI-Powered Protection Against Crypto Rug Pulls",
+  description: "AI-Powered Protection Against Crypto Rug Pulls with Real-Time Scanning",
   icons: {
     icon: "/logo.jpg"
+  },
+  openGraph: {
+    title: "RugGuard AI | Web3 Security",
+    description: "Stay ahead of malicious contracts with our AI security agent.",
+    type: "website",
+    siteName: "RugGuard AI",
+    images: ["/logo.jpg"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RugGuard AI",
+    description: "AI-Powered Protection Against Crypto Rug Pulls",
+    images: ["/logo.jpg"]
   }
 };
 
@@ -32,13 +45,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", inter.variable)} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-500 ease-in-out`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
-          disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
